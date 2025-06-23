@@ -1,0 +1,10 @@
+:root {
+    --color-text: #174990;
+    --color-primary: #576cbc;
+    --color-secondary: #19376d;
+    --color-dark: #ffffff;
+    --color-bg: #04152d;
+    /* or try a linear-gradient if you want to mimic the background transition */
+    --color-accent: #f57c00;
+    /* Optional for that orange splash */
+    --font-roboto: "Roboto", sans-serif; }

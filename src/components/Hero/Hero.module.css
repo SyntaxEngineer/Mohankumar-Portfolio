@@ -1,0 +1,172 @@
+@import "../../vars.css";
+
+/* Container Styling */
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 10%;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+    max-width: 50%;
+}
+
+.title {
+    font-size: 55px;
+    /* down from 64px */
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-family: var(--font-roboto);
+    background: linear-gradient(90deg, #5E60CE 0%, #4361EE 60%, #4CC9F0 120%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    white-space: nowrap;
+    /* prevents the line from breaking */
+    line-height: 1.2; }
+/* .title {
+    font-size: 68px;
+    font-weight: 900;
+    margin-bottom: 33px;
+    margin-top: 50px; /* Add this line to create space above */
+    /* font-family: var(--font-roboto);
+    background: linear-gradient(90deg,
+            rgb(230, 130, 17) 70%,
+            rgba(239, 238, 235, 0) 120%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+/*} */
+
+.description {
+    font-size: 25px;
+    font-family: var(--font-roboto);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.description TypeAnimation {
+    color: #4895EF;
+    font-weight: bold;
+}
+
+/* Button Section */
+.btn {
+    display: flex;
+    gap: 20px;
+}
+
+/* Contact Button */
+.contactBtn {
+    text-decoration: none;
+    background-color: #4ccaf0c8;
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 20px;
+    box-shadow: 0 6px 12px rgba(76, 201, 240, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(76, 201, 240, 0.7);
+}
+
+/* CV Button */
+.cvBtn {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #7400B8 0%, #6930C3 50%, #5E60CE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cvBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(115, 103, 192, 0.5);
+    
+}
+
+/* Hero Image Styling */
+.heroImg {
+    width: 40%;
+    animation: floating 3s infinite ease-in-out;
+    z-index: 1;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+/* Top Blur Styling */
+.topBlur {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    min-width: 300px;
+    top: -100px;
+    left: 5vw;
+    background: rgba(92, 124, 250, 0.2);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+/* Bottom Blur Styling */
+.bottomBlur {
+    position: absolute;
+    width: 60vw;
+    height: 40vw;
+    min-width: 250px;
+    bottom: -80px;
+    right: -20vw;
+    background: rgba(147, 112, 219, 0.3);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 830px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .heroImg {
+        width: 60%;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

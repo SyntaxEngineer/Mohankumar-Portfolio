@@ -1,0 +1,66 @@
+@import '../../vars.css';
+
+.container {
+    color: var(--color-text);
+    background-color: #060a16ba;
+    padding: 60px 40px;
+    margin: 80px auto;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.05);
+    text-align: center;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff6b6b, #fcd34d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15%;
+    margin-top: 20px;
+}
+
+.AA,
+.AI,
+.AD {
+    width: 160px;
+    height: 160px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(242, 255, 0, 0.1);
+    background-color: rgba(199, 186, 44, 0.03);
+    padding: 10px;
+}
+
+.AA:hover,
+.AI:hover,
+.AD:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(252,211,77, 0.197);
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .AA,
+    .AI,
+    .AD {
+        width: 120px;
+        height: 120px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}

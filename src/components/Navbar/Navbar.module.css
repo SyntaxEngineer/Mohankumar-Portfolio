@@ -1,0 +1,120 @@
+@import "../../vars.css";
+
+/* Navbar Styling */
+.navbar {
+    position: fixed; /* Makes the navbar sticky */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px; /* Added consistent padding */
+    z-index: 10;
+    background: rgba(20, 20, 20, 0.9); /* Sleek dark background with slight transparency */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFD700; /* Bright gold for standout branding */
+    transition: color 0.3s ease;
+}
+
+.title:hover {
+    color: #FFA500; /* Orange on hover for interaction */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu Items (Desktop) */
+.menuItems {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menuItems a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF; /* Clean white text */
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menuItems a:hover {
+    color: #000000; /* Black text on hover */
+    background: #FFD700; /* Gold hover effect */
+}
+
+/* Hamburger Button (Mobile) */
+.menuBtn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menuBtn:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px; /* Space below the navbar */
+        right: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 9;
+    }
+
+    .menuBtn {
+        display: block;
+    }
+
+    .menuItems {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+        background: linear-gradient(180deg, rgba(50, 50, 50, 0.9) 0%, #1A1A1A 100%);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .menuOpen {
+        display: flex;
+    }
+
+    .menuItems a {
+        font-size: 18px;
+        padding: 10px 15px;
+        color: #FFD700; /* Brighter text color for mobile */
+    }
+
+    .menuItems a:hover {
+        background: #FFA500;
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,39 @@
+[
+    {
+        "title": "Banking Application",
+        "imageSrc": "./project.png",
+        "description": "This Project demonstrates the exact working of real banking application.",
+        "skills": [
+            "React",
+            ".Net Core",
+            "Rest API"
+        ],
+        "demo": "https://www.example.com",
+        "source": "https://www.github.com"
+    },
+    {
+        "title": "Portfolio Website",
+        "imageSrc": "projects/project.png",
+        "description": "This Project serves as a digital resume and also shocasing my skills in Programming.",
+        "skills": [
+            "React",
+            "HTML",
+            "CSS",
+            "Github"
+        ],
+        "demo": "https://www.example.com",
+        "source": "https://www.github.com"
+    },
+    {
+        "title": "Contacts manager",
+        "imageSrc": "projects/project.png",
+        "description": "This is a project demonstrating CRUD operation to maintain contacts in server.",
+        "skills": [
+            ".Net Core",
+            "MVC",
+            "SQL Server"
+        ],
+        "demo": "https://www.example.com",
+        "source": "https://www.github.com"
+    }
+]

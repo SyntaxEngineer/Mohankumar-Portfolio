@@ -1,0 +1,74 @@
+.container {
+    background: linear-gradient(125deg, #010a17, #073a50);
+    padding: 60px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    border-top: 8px solid #ff6b6b;
+    margin-top: 15px;
+}
+
+.text h2 {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    background: linear-gradient(90deg, #457b9d, #e34b4b);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.text p {
+    font-size: 30px;
+    color: #e34b4b;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.link img{
+    margin-right: 4px;
+}
+
+.link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.link a {
+    font-size: 20px;
+    color: #1d3557;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link a:hover {
+    color: #ff6b6b;
+}
+
+.link img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.link img:hover {
+    transform: rotate(15deg);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}

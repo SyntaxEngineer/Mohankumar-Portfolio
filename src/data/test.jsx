@@ -1,0 +1,1 @@
+import a from '../assets/projects/project.png';
