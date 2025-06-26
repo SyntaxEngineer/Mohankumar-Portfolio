@@ -4,11 +4,11 @@ import img from '../../assets/projects/project.png';
 
 
 export const ProjectCard = ({
-    project: { title, description, skills, demo, source },
+    project: { title, description, skills,imageSrc, demo, source },
 }) => {
     return (
         <div className={styles.container}>
-            <img src={img} alt={`pic of ${title}`} className={styles.image} />
+            <img src={imageSrc} alt={`pic of ${title}`} className={styles.image} />
             <h3 className={styles.title} >{title}</h3>
             <p className={styles.description}>{description}</p>
             <ul className={styles.skills}>

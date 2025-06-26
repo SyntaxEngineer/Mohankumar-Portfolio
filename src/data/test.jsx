@@ -1,1 +1,1 @@
-import a from '../assets/projects/project.png';
+import a from '../assets/projects/crud.png';
