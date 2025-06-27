@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProjectCard.module.css';
-import img from '../../assets/projects/project.png';
+import img from '../../assets/projects/crud.png';
 
 
 export const ProjectCard = ({

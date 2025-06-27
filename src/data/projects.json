@@ -1,7 +1,7 @@
 [
     {
         "title": "Banking Application",
-        "imageSrc": "./project.png",
+        "imageSrc": "/projects/crud.png",
         "description": "This Project demonstrates the exact working of real banking application.",
         "skills": [
             "React",
@@ -13,7 +13,7 @@
     },
     {
         "title": "Portfolio Website",
-        "imageSrc": "projects/portfolio.png",
+        "imageSrc": "/projects/portfolio.png",
         "description": "This Project serves as a digital resume and also shocasing my skills in Programming.",
         "skills": [
             "React",
@@ -26,7 +26,7 @@
     },
     {
         "title": "Contacts manager",
-        "imageSrc": "../assets/projects/crud.png",
+        "imageSrc": "/projects/crud.png",
         "description": "This is a project demonstrating CRUD operation to maintain contacts in server.",
         "skills": [
             ".Net Core",
