@@ -23,10 +23,27 @@ export const Hero = () => {
                        to deliver innovative solutions. Let's connect and build something extraordinary together!
                     </p>
                 </span>
-                <div className={styles.btn}>
+                {/* <div className={styles.btn}>
                     <a href='mailto:mohanprojectid@gmail.com' className={styles.contactBtn}>Contact me</a>
-                    <a href='https://drive.google.com/file/d/1VCdPakT6fAE1JSua4xEio9g756bDWeBU/view?usp=sharing' target='_blank' rel="noopener noreferrer" className={styles.cvBtn}> My CV</a>
+                    <a href='https://drive.google.com/file/d/1cPAqNvtBAuzZpUEr6Sf1vN-sucLDNQ_y/view?usp=sharing' target='_blank' rel="noopener noreferrer" className={styles.cvBtn}> My CV</a>
+                </div> */}
+                <div className={styles.btn}>
+                    <a href="mailto:mohanprojectid@gmail.com" className={styles.contactBtn}>
+                        Contact me
+                    </a>
+                    <div className={styles.glowWrapper}>
+                        <span className={styles.blinkDot}></span>
+                        <a
+                        href="https://drive.google.com/file/d/1cPAqNvtBAuzZpUEr6Sf1vN-sucLDNQ_y/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.cvBtn}
+                        >
+                        My CV
+                        </a>
+                    </div>
                 </div>
+
             </div>
             <img src={me} alt='hero img' className={styles.heroImg} />
             <div className={styles.topBlur} />

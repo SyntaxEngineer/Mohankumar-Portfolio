@@ -72,3 +72,43 @@
     transform: rotate(15deg);
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 40px 5%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .text h2 {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    .text p {
+        font-size: 22px;
+    }
+
+    .links {
+        width: 100%;
+        align-items: center;
+    }
+
+    .link {
+        justify-content: center;
+        width: 90%;
+        padding: 12px;
+    }
+
+    .link img {
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+    }
+
+    .link a {
+        font-size: 18px;
+    }
+}
