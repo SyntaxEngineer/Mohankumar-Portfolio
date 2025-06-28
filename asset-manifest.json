@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/Mohankumar-Portfolio/static/css/main.f337c73b.css",
-    "main.js": "/Mohankumar-Portfolio/static/js/main.9aae22d4.js",
+    "main.css": "/Mohankumar-Portfolio/static/css/main.31000b96.css",
+    "main.js": "/Mohankumar-Portfolio/static/js/main.c70f640d.js",
     "static/media/abt.png": "/Mohankumar-Portfolio/static/media/abt.51e9a5c4d35890694d5b.png",
+    "static/media/portfolio.png": "/Mohankumar-Portfolio/static/media/portfolio.a8cd27805097c9aa5384.png",
     "static/media/bg1.png": "/Mohankumar-Portfolio/static/media/bg1.945091ce1f90f1df09e1.png",
+    "static/media/crud.png": "/Mohankumar-Portfolio/static/media/crud.88780ec1b264e7fbc9bf.png",
     "static/media/project.png": "/Mohankumar-Portfolio/static/media/project.6b80dc22339b227d4ce7.png",
     "static/media/cts.png": "/Mohankumar-Portfolio/static/media/cts.754284e257d61ccf1b2d.png",
     "static/media/az204.png": "/Mohankumar-Portfolio/static/media/az204.61f829c26f1a7015cf0f.png",
     "static/media/az104.png": "/Mohankumar-Portfolio/static/media/az104.84267b6716d879cdad28.png",
     "static/media/ai 102.png": "/Mohankumar-Portfolio/static/media/ai 102.e50e2e94f88fc2d64a13.png",
     "index.html": "/Mohankumar-Portfolio/index.html",
-    "main.f337c73b.css.map": "/Mohankumar-Portfolio/static/css/main.f337c73b.css.map",
-    "main.9aae22d4.js.map": "/Mohankumar-Portfolio/static/js/main.9aae22d4.js.map"
+    "main.31000b96.css.map": "/Mohankumar-Portfolio/static/css/main.31000b96.css.map",
+    "main.c70f640d.js.map": "/Mohankumar-Portfolio/static/js/main.c70f640d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f337c73b.css",
-    "static/js/main.9aae22d4.js"
+    "static/css/main.31000b96.css",
+    "static/js/main.c70f640d.js"
   ]
 }
