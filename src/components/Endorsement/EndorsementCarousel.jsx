@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
-import Slider from 'react-slick';
+import { useState, useEffect } from 'react';
 import { db } from '../../firebase';
 import { collection, query, where, orderBy, onSnapshot } from 'firebase/firestore';
+import { Box, Typography, Fade } from '@mui/material';
 import styles from './EndorsementCarousel.module.css';
 
 export function EndorsementCarousel() {
   const [endorsements, setEndorsements] = useState([]);
+  const [current, setCurrent] = useState(0);
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     const q = query(
@@ -14,33 +16,53 @@ export function EndorsementCarousel() {
       orderBy('createdAt', 'desc')
     );
     const unsub = onSnapshot(q, (snapshot) => {
-      setEndorsements(snapshot.docs.map(doc => doc.data()));
+      const data = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setEndorsements(data);
     });
-
     return () => unsub();
   }, []);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    speed: 600,
-    autoplaySpeed: 5000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  useEffect(() => {
+    if (!endorsements.length) return;
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % endorsements.length);
+        setFade(true);
+      }, 300);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [endorsements]);
+
+  if (!endorsements.length) {
+    return (
+      <Box className={styles.carousel}>
+        <Typography>No endorsements yet. Be the first to add one!</Typography>
+      </Box>
+    );
+  }
+
+  const index = current % endorsements.length;
+  const { name, comment, rating, company } = endorsements[index];
 
   return (
-    <div className={styles.carousel}>
-      <h2>What Others Say</h2>
-      <Slider {...settings}>
-        {endorsements.map((e, i) => (
-          <div key={i} className={styles.card}>
-            <p>"{e.comment}"</p>
-            <h4>— {e.name} ({e.rating}★)</h4>
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <Box className={styles.carousel}>
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>
+        What Others Say:
+      </Typography>
+
+      <Fade in={fade} timeout={400}>
+        <Box className={styles.card}>
+          <p>"{comment}"</p>
+          <h4>
+            — {name}
+            {company && ` from ${company}`} ({rating}★)
+          </h4>
+        </Box>
+      </Fade>
+    </Box>
   );
 }

@@ -1,6 +1,6 @@
 .section {
     padding: 2rem;
-    background: #f7f7f7;
+    background: #060a16ba;
     border-radius: 10px;
     max-width: 900px;
     margin: 3rem auto;
@@ -8,7 +8,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.button {
+/* .button {
     margin-top: 1rem;
     background-color: #007bff;
     color: white;
@@ -23,4 +23,25 @@
 
 .button:hover {
     background-color: #0056b3;
+} */
+
+
+.button {
+    margin-top: 1rem;
+    background-color: #1c2433;
+    /* deep bluish-gray tone */
+    color: #f0f0f0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 6px;
+    border-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.button:hover {
+    background-color: #2b3548;
+    transform: translateY(-1px);
 }
